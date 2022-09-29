@@ -114,20 +114,20 @@ static void intro(){
     String convertChar = inputChar.toUpperCase();
     if (convertChar instanceof String) {
         switch (convertChar) {
-            case "A" -> 
+            case "A":
                 addElement(); 
-            case "B" ->
+            case "B":
                 removeElement();
-            case "C" ->
+            case "C":
                 displayElement();
-            case "D" ->
+            case "D":
                 clearArray();
-            case "E" ->
+            case "E":
                 exitElement();
-            default -> {
+            default:
                 System.out.println("Invalid input");
                 intro();
-            }
+            
         }
     }
 }
