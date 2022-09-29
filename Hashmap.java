@@ -1,5 +1,6 @@
 //This is program accepts strings and numbers.
 //Please be warned!
+// by: John Rey Calesa 😘
 
 import java.util.HashMap;
 import java.util.Scanner;
