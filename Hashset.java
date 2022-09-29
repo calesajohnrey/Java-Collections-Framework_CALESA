@@ -13,7 +13,7 @@ public class Hashset {
         System.out.println(" --------------------------------------------- ");
         System.out.println("This is the interface for adding an element!");
         Scanner prompt = new Scanner(System.in);
-        System.out.print("Enter the new item here: ");
+        System.out.print("Enter the new item here (Integer only): ");
         String newInputItem = prompt.nextLine();
         if (newInputItem instanceof String) {
             String stringed = newInputItem;
