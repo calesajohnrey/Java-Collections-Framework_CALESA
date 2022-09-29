@@ -1,3 +1,6 @@
+//This is program only accepts numbers.
+//Please be warned!
+
 import java.util.HashSet;
 import java.util.Scanner;
 
