@@ -15,7 +15,11 @@ public class main {
         do {
             System.out.print("Enter the name here: ");
             String newInputName= numberSize.next();
-            if (newInputName instanceof java.lang.String){
+            if (newInputName.matches("-?\\d+(\\.\\d+)?")){
+                System.out.print("Invalid Input"); 
+                System.out.print("\n"); 
+                System.out.print("\n");
+            }else{
                 System.out.print("Enter the age here: ");
                 Integer newInputAge= numberSize.nextInt();
                 if (newInputAge instanceof Integer){
@@ -32,12 +36,12 @@ public class main {
                         System.out.println(persons);                   
                     }else{
                         System.out.print("Invalid Input.");
+                        System.out.print("");   
                     }
                 }else {
                     System.out.print("Invalid Input.");
-                }    
-            }else{
-               System.out.print("Invalid Input.");
+                    System.out.print("");   
+                }   
             }
         } while(i<nums);
             } catch (Exception e){
