@@ -1,14 +1,20 @@
-
 package oop_calesa;
 
-public class object<name>{
-  private name object;
+public class object<Name, Age> {
 
-  public name getName<name> {
-    return this.obj;
-  }
+    private Name key;
+    private Age value;
 
-  public void setName<name object> {
-    this.obj = newName;
-  }
+    public object(Name key, Age value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public Name getKey()    { 
+        return key; 
+    }
+    
+    public Age getValue() { 
+        return value; 
+    }
 }
