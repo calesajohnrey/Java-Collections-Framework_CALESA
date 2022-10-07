@@ -1,27 +1,47 @@
 package oop_calesa;
 import java.util.ArrayList;
 import java.util.Scanner;
+import static oop_calesa.Person.persons;
 
 public class main {
-    public static ArrayList<Integer> numbers;
-    public static void main(String[] args) {
+     public static void main(String[] args){
+        persons = new ArrayList<Object>();
         try {
+            System.out.println("Hi.");
             System.out.println("Please enter the size of the array: ");
-            Scanner number = new Scanner(System.in); 
-            String numberArrStr = number.next();
-            Integer nums = Integer.parseInt(numberArrStr);
-            numbers = new ArrayList<>(nums);
-            Scanner prompt = new Scanner(System.in);
-            System.out.print("Enter the new item here: ");
-            String newInputItem = prompt.next(); 
-            Integer newObject = Integer.parseInt(newInputItem);
-            numbers.add(newObject);
-            System.out.println(" ");
-            System.out.println("You set the number of items in the Array!");
-            System.out.println(" ");
-            System.out.println(numbers);  
-        } catch (Exception e) {
-            System.out.print("Error!");
+            Scanner numberSize = new Scanner(System.in); 
+            int nums = numberSize.nextInt();
+            int i=0;
+        do {
+            System.out.print("Enter the name here: ");
+            String newInputName= numberSize.next();
+            if (newInputName instanceof java.lang.String){
+                System.out.print("Enter the age here: ");
+                Integer newInputAge= numberSize.nextInt();
+                if (newInputAge instanceof Integer){
+                    Person<String> name = new Person<>();
+                    name.setName(newInputName);
+                    Person<Integer> num = new Person<>();
+                    num.setAge(newInputAge);
+                    String nameAdd = name.getName();
+                    Integer ageAdd = num.getAge();
+                    if (nameAdd instanceof String && ageAdd instanceof Integer){
+                        persons.add(nameAdd);
+                        persons.add(String.valueOf(ageAdd));
+                        i++;
+                        System.out.println(persons);                   
+                    }else{
+                        System.out.print("Invalid Input.");
+                    }
+                }else {
+                    System.out.print("Invalid Input.");
+                }    
+            }else{
+               System.out.print("Invalid Input.");
+            }
+        } while(i<nums);
+            } catch (Exception e){
+                System.out.println("Something went wrong!");
         }
     }
 }
